@@ -15,10 +15,10 @@ public:
         if(p == NULL and q == NULL) return true;
         if(p == NULL and q != NULL) return false;
         if(p != NULL and q == NULL) return false;
-        bool l = isSameTree(p -> left, q -> left);
+        bool l = isSameTree(p -> left, q -> left); // check if left, right subtree is same
         bool r = isSameTree(p -> right, q -> right);
         
-        bool check = p -> val == q -> val;
+        bool check = p -> val == q -> val; // check whether they have same value
         if(l and r and check) return true;
         
         return false;
