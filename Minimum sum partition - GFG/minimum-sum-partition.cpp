@@ -31,6 +31,11 @@ class Solution{
         
         vector<int>v; // store valid subset or filtering or search space
         // Then we will store the all valid subset in our vector till half way coz we need positive value
+        for(int i= 0;i<n+1;i++){
+            for(int j = 0;j<(sum+1)/2;j++){
+                if(dp[n][j] == true) v.push_back(j);
+            }
+        }
         for(int i=0;i<=sum/2;i++){
             if(dp[n][i] == true)
                 v.push_back(i);
