@@ -10,7 +10,7 @@ using namespace std;
 
 class Solution{
   public:
-    int knapSack(int N, int W, int val[], int wt[])
+    int unboundedknapSack(int N, int W, int val[], int wt[])
     {
         // code here
         int dp[N+1][W+1];
@@ -41,7 +41,7 @@ class Solution{
             arr[i] = i+1;
         }
         
-        int ans  = knapSack(n,n,price,arr);
+        int ans  = unboundedknapSack(n,n,price,arr);
         return ans;
         
     }
